@@ -2,7 +2,9 @@ import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const response = await axios.get("https://fakestoreapi.herokuapp.com/users");
+  const response = await axios.get(
+    "https://61370c848700c50017ef5771.mockapi.io/users"
+  );
 
   return response.data;
 });

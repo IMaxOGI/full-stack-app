@@ -6,7 +6,7 @@ export const getProductsInCart = createSelector(
   (state) => state.cart,
   (products, cart) => {
     const result = cart.map((cartItem) => {
-      const { id, image, price, title } = products.find(
+      const { id, image, price, name } = products.find(
         (product) => product.id === cartItem.id
       );
       return {
@@ -14,7 +14,7 @@ export const getProductsInCart = createSelector(
         count: cartItem.count,
         image,
         price,
-        title,
+        name,
       };
     });
     return result;

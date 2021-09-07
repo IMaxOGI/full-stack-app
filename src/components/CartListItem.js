@@ -25,7 +25,7 @@ function CartListItem({ product }) {
       </List.Content>
       <Image avatar src={product.image} />
       <List.Content>
-        {product.title} -
+        {product.name} -
         <span calssName="muted">
           {product.price}$ x {product.count} =
           {(product.price * product.count).toFixed(2)}$
