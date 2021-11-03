@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 require("express-async-errors");
-const bodyParser = require("body-parser");
 const session = require("express-session");
 const cors = require("cors");
 require("./connect-db");
@@ -12,7 +11,6 @@ const authRouter = require("./api/auth");
 
 const API_PORT = 3001;
 
-const jsonParser = bodyParser.json();
 const app = express();
 
 app.use(express.static("public"));
@@ -32,7 +30,7 @@ app.use(
   })
 );
 
-app.use(jsonParser);
+app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
   res.send("Hello User!");

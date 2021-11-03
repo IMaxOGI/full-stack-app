@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-mongoose.connect(process.env.DATABASE_TOKEN, {
+mongoose.connect("mongodb+srv://Max:qwert12345@cluster0.rytiy.mongodb.net/test", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
