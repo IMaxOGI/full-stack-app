@@ -14,6 +14,7 @@ const schema = yup.object().shape({
       "emailUniqueTest",
       "This email has already been taken",
       async (value) => {
+        console.log("1:", value);
         if (!value) return true;
         const isExist = await apiClient
           .get(`/users/is-exist?email=${value.toLowerCase()}`)

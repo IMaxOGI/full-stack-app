@@ -10,10 +10,10 @@ function ProductItem({ product, user }) {
     <Card>
       <Card.Content>
         <Image style={{ marginBottom: 20 }} src={product.image} />
-        <Card.Header>{product.name}</Card.Header>
-        <Card.Meta>{product.adjective}</Card.Meta>
+        <Card.Header>{product.title}</Card.Header>
+        <Card.Meta>{product.category}</Card.Meta>
+        <Card.Description>Description: {product.description}</Card.Description>
         <Card.Description>Price: {product.price}$</Card.Description>
-        {/* <Card.Description>{user.name}</Card.Description> */}
       </Card.Content>
       <Card.Content extra>
         <div className="ui two buttons">

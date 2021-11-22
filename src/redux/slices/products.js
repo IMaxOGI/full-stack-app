@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
   const response = await axios.get(
-    "https://61370c848700c50017ef5771.mockapi.io/products2"
+    "https://fakestoreapi.com/products"
   );
 
   return response.data;
